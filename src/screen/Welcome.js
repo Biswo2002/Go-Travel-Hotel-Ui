@@ -1,7 +1,10 @@
 import { ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-
+import { useNavigation } from '@react-navigation/native'
 const Welcome = () => {
+
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.Main}>
       <View style={styles.Header}>
@@ -26,7 +29,9 @@ const Welcome = () => {
       <View style={styles.ColorContainer2}></View>
       <ImageBackground source={require('../assets/image/BG3.png')} style={styles.IMgBackground}>
         <View style={styles.BtnShadow}>
-          <TouchableOpacity style={styles.Buttom}>
+          <TouchableOpacity style={styles.Buttom}
+            onPress={() => navigation.navigate('Home')}
+          >
             <Text style={styles.GoButtom}>GO</Text>
           </TouchableOpacity>
         </View>
@@ -117,16 +122,16 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     // marginHorizontal: 180,
     padding: 25,
-    margin:10
+    margin: 10
   },
   BtnShadow: {
     borderWidth: 4,
     width: 120,
-    height:120,
+    height: 120,
     marginTop: 320,
-    marginHorizontal:170,
-    borderRadius:60,
-    borderColor:'#00BAC7'
+    marginHorizontal: 170,
+    borderRadius: 60,
+    borderColor: '#00BAC7',
   },
   GoButtom: {
     color: '#fff',

@@ -1,21 +1,20 @@
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
-  View,
 } from 'react-native';
 
-import { Welcome } from './src/screen'
+import Routes from './src/Routes'
 
 const App = () => {
 
   return (
-    <Welcome />
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
+    // // <Welcome />
+    // <Home/>
   );
 };
 
