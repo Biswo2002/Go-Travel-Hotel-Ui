@@ -6,6 +6,7 @@ import Details from '../screen/Details'
 import Home from '../screen/Home'
 import Welcome from '../screen/Welcome'
 
+
 const Stack = createNativeStackNavigator()
 
 const PrivateRoutes = () => {
@@ -21,7 +22,7 @@ const PrivateRoutes = () => {
     component={Home}
     options={{headerShown:false}}
     />
-    <Stack.Screen  name="Details" component={Details} options={{headerShown:false}} />
+    <Stack.Screen  name="Details" component={Details} options={{headerShown:true}} />
   
   </Stack.Navigator>
   )

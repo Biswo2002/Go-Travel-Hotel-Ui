@@ -1,6 +1,6 @@
 import { ImageBackground, StyleSheet, SafeAreaView, Text, View, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import Octicons from 'react-native-vector-icons/Octicons'
@@ -76,7 +76,7 @@ const Details = () => {
         <View style={styles.PassageContainer}>
           <Text style={styles.TextContainer}>{route.params.HOTEL.Text}</Text>
         </View>
-        <TouchableOpacity style={styles.Buttom}>
+        <TouchableOpacity style={styles.Buttom}  >
           <Text style={styles.Book}>Book Now</Text>
           <AntDesign name='arrowright' size={30} color={'#fff'} style={styles.ArrowIcon}/>
         </TouchableOpacity>
