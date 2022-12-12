@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
 import Details from '../screen/Details'
 import Home from '../screen/Home'
 import Welcome from '../screen/Welcome'
